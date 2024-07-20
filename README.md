@@ -8,7 +8,7 @@ This repository contains solutions to various array-related problems from LeetCo
 
 - [ ] **Find the Duplicate Number**
   - Difficulty: Medium
-  - Link: [LeetCode Problem 287](https://leetcode.com/problems/find-the-duplicate-number/)
+  - Link: [LeetCode Problem 287](https://github.com/321prasad0058/CrackYourPlacement-/blob/main/findDuplicate.java)
 
 - [ ] **Sort Colors**
   - Difficulty: Medium
