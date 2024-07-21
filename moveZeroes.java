@@ -1,6 +1,6 @@
 class Solution {
     public void moveZeroes(int[] nums) {
-        
+     /*   
        for(int i =0; i<nums.length-1; i++)
        {
        // Find next non-zero element to swap with
@@ -21,6 +21,24 @@ class Solution {
             }
         
          }
-       } 
+       }
+
+        */
+
+       // ------------------------------------ Solution 2 --------------------------------
+
+         int j = 0;
+
+        for(int i = 0; i<nums.length; i++)
+        {
+            if(nums[i]!=0)
+            {
+                int temp = nums[i];
+                nums[i]=nums[j];
+                nums[j]=temp;
+                j++;
+            }
+        }
+
     }
   }  
