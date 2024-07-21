@@ -1,0 +1,24 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        
+        int res[] = new int[2];
+        HashMap<Integer,Integer> map = new HashMap<>();
+
+        for(int i = 0; i<nums.length; i++)
+        {
+            int num = nums[i]; 
+            int remove = target - num;   // finding other half to search in Map
+
+            // If contained in HashMap , just add both indexes to res 
+            if(map.containsKey(remove))
+            {
+                res[0]= map.get(remove);
+                res[1] = i;
+            }
+            map.put(nums[i],i);
+        }
+
+        return res;
+    
+    }
+}
