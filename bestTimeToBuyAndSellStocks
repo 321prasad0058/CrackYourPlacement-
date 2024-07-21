@@ -1,0 +1,20 @@
+class bestTimeToBuyAndSellStocks
+{
+  public int maxProfit(int[] prices)
+  {
+    int max = 0;
+    int bp = prices[0];
+
+    for(int i = 0; i<prices.length; i++)
+    {
+      int prof = prices[i]-bp;
+      if(bp>prices[i])
+      {
+        bp = prices[i];
+      }
+      max = Math.max(max,prof);
+    }
+
+    return max;
+  }
+}
