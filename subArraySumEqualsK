@@ -1,0 +1,26 @@
+class Solution {
+    public int subarraySum(int[] nums, int k) {
+
+        // Map to store the preSum and it's count
+        Map<Integer,Integer> mpp = new HashMap<>();
+        
+        int preSum = 0;  // prefix sum
+        int cnt = 0;    // cnt of all subarray sum = k
+        mpp.put(0,1);   // initially preSum = 0 with cnt = 1
+      
+
+        for(int i = 0; i<nums.length; i++)
+        {
+            preSum += nums[i]; // get current prefix Sum
+
+            int remove = preSum -k; // complement value (preSum -k) that would give required sum k
+
+            cnt += mpp.getOrDefault(remove,0); // if remove exists, increase cnt by 1 
+
+            mpp.put(preSum,mpp.getOrDefault(preSum,0)+1); // update map with current preSum
+        }
+
+        return cnt;
+       
+    }
+}
