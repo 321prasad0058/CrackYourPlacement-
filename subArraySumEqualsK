@@ -1,5 +1,7 @@
-class Solution {
-    public int subarraySum(int[] nums, int k) {
+class Solution 
+{
+    public int subarraySum(int[] nums, int k) 
+    {
 
         // Map to store the preSum and it's count
         Map<Integer,Integer> mpp = new HashMap<>();
